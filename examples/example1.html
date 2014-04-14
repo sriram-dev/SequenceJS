@@ -1,0 +1,63 @@
+<html>
+<head>
+	<title> StepsJs Example </title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="steps.js"></script>
+	<script type="text/javascript" src="../js/sequence.js"></script>
+	<link rel="stylesheet" type="text/css" href="steps.css">
+	<link rel="stylesheet" type"text/css" href="../css/sequence.css">
+	<script type="text/javascript">
+		$(function(){
+			var mydemo = new Sequence("applySteps", {});
+			var step1 = new Steps("#applySteps");
+			step1.applySteps();
+			mydemo.registerEvent("Lets check out a demo of a Library called StepsJS!", function(){
+				console.log("Step 1");
+			}, this);
+			mydemo.registerEvent("Lets set width to 50% using the setWidth API!", function() {
+				console.log("Step 2");
+			}, this);
+			mydemo.registerEvent("Well that looks Good! Lets increase it back to 80%", function() {
+				console.log("Step 3");
+				step1.setWidth("50%");
+			}, this);
+            mydemo.registerEvent("Moving on to Height API - setHeight() ", function() {
+            	console.log("Step 4");
+            	step1.setWidth("80%");
+            }, this);
+            mydemo.registerEvent("Hope you enjoyed it!", function() {
+            	step1.setHeight("50%");
+            	console.log("inside step5");
+            }, this);
+            $("#steps_demo").on('click', function() {
+            	mydemo.run();
+            });
+		});
+	</script>
+</head>
+<body>
+	<button id="steps_demo">View Demo</button>
+	<br/>
+	<br/>
+	<br/>
+	<div id="applySteps">
+		<div class="steps_title"> Step1 - Signin/Signup </div>
+		<div class="steps_desc"> Content of signin </div>
+
+		<div class="steps_title"> Step2 - Choose Test </div>
+		<div class="steps_desc"> Content of choosing a test </div>
+
+		<div class="steps_title"> Step 3 - Write Test </div>
+		<div class="steps_desc"> Write the Test here </div>
+
+		<div class="steps_title"> Step 4 - Check results </div>
+		<div class="steps_desc"> Get the result for the test </div>
+		
+		<div class="steps_title"> Step 5 - Share the results </div>
+		<div class ="steps_desc"> Share with Twitter/Facebook or whtever</div>
+
+		<div class="steps_title"> Step 6 - Share the results </div>
+		<div class ="steps_desc"> Share with Twitter/Facebook or whtever</div>	
+	</div>
+</body>
+</html>

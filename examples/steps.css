@@ -1,0 +1,139 @@
+/*
+steps.css
+*/
+.steps_menu {
+	background-color: #FFFFE0; /* #FFFFE0; */
+     margin: 1%;
+}
+/*
+.arrow_box {
+	position: relative;
+	background: #00ffff;
+	border: 1px solid #c2e1f5;
+	float:left;
+	margin-left: 25px;	
+}
+
+.arrow_box:after {
+	 width:0;
+	 position:absolute;
+     height:0;
+     float:left;
+     content:" ";
+     left:100%;
+     top:0%;
+     border-left:30px solid #c2e1f5;
+     border-top:40px solid transparent;
+     border-bottom:40px solid transparent;
+     -moz-box-sizing: border-box;
+     -webkit-box-sizing: border-box;
+     -ms-box-sizing: border-box;
+     box-sizing: border-box;     
+}
+*/
+.menu_circle {
+     position:relative;     
+     background: #c2e1f5;
+     -moz-border-radius: 50px;
+     -webkit-border-radius: 50px;
+     border-radius: 50px;
+     float:left;
+     margin-left: 20px;
+     outline: none;
+}
+.menu_name {
+     font-family: sans-serif;
+     position: relative;
+     top:20%;
+     left:0%;
+}
+
+.active {
+     background: green;
+}
+
+.invisible { 
+     visible : false;
+}
+.main_container {
+     background: #FFFFE0;
+     font-family: sans-serif;
+     font-size: 1.2em;
+     border-radius: 25px;
+     padding : 10px;
+     width:80%;
+     height: 80%;
+     left:0;
+     right:0;
+     overflow-y: hidden;
+     margin: auto;
+    -moz-box-shadow:    3px 3px 5px 6px #ccc;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    box-shadow:         3px 3px 5px 6px #ccc;
+}
+
+.steps_title {
+     position:relative;
+     color: blue;
+     font-size: 2em;
+     left:0;
+     right:0;
+     top:5%;
+     margin: auto;
+}
+
+.steps_desc {
+     position: relative;
+     top: 5%;
+}
+
+.steps_menu {
+     top:5%;     
+}
+
+.scrollbar{
+     margin-top:40px;
+     overflow:hidden;
+}
+
+.scrollbar:hover {
+     overflow:auto;
+}
+
+/*
+.main_container::-webkit-scrollbar{
+     width:16px;
+     background-color:#cccccc;
+}
+
+.main_container::-webkit-scrollbar-thumb{
+background-color:#B03C3F;
+border-radius:10px;
+}
+
+.main_container::-webkit-scrollbar-thumb:hover{
+background-color:#BF4649;
+border:1px solid #333333;
+}
+
+.main_container::-webkit-scrollbar-thumb:active{
+background-color:#A6393D;
+border:1px solid #333333;
+} 
+*/
+/*Scroll bar */
+
+.main_container::-webkit-scrollbar {
+    width: 1em;
+    margin-left: 5%;
+    overflow: hidden;
+}
+ 
+.main_container::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+.main_container::-webkit-scrollbar-thumb {
+  background-color: lightgrey;
+  outline: 1px solid white;
+}
